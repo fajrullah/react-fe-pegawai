@@ -5,10 +5,21 @@ export default class Index extends Component {
     state = {
         data : []
     }
-    componentDidMount(){
+    fetchData(){
         axios.get('http://localhost:8000/karyawan/')
         .then(res => res.data)
         .then(data => this.setState({data}))
+    }
+    componentDidMount(){
+        this.fetchData()
+    }
+    onClick(e){
+        axios.delete(`http://localhost:8000/karyawan/${e}`)
+        .then(res => res.data)
+        .then(status => {
+            alert(status)
+            this.fetchData()
+        })
     }
     render() {
         const { data } = this.state
@@ -44,10 +55,10 @@ export default class Index extends Component {
                                     {key.divisi.nama_divisi}
                                 </td>
                                 <td>
-                                    <button className="btn btn-warning">Edit</button>
+                                    <Link to={"/editKaryawan/"+key.id} className="btn btn-warning">Edit</Link>
                                 </td>
                                 <td>
-                                    <button className="btn btn-danger">Delete</button>
+                                    <button className="btn btn-danger" onClick={this.onClick.bind(this,key.id)}>Delete</button>
                                 </td>
                             </tr>)
                         })

@@ -6,9 +6,9 @@ import createJabatan from './components/jabatan/create.component';
 import createKaryawan from './components/karyawan/create.component';
 import createDivisi from './components/divisi/create.component';
 
-import editJabatan from './components/jabatan/create.component';
-import editKaryawan from './components/karyawan/create.component';
-import editDivisi from './components/divisi/create.component';
+import editJabatan from './components/jabatan/edit.component';
+import editKaryawan from './components/karyawan/edit.component';
+import editDivisi from './components/divisi/edit.component';
 // const routes = [
 //     {path : '/create' , exact : true , component : Create , name : 'Divisi Create'},
 //     {path : '/edit/:id' ,  component : Edit , name : 'Divisi Create'},
@@ -22,9 +22,9 @@ const routes = [
     {path : '/createJabatan' ,  component : createJabatan , name : 'Jabatan'},
     {path : '/createDivisi' ,  component : createDivisi , name : 'Divisi'},
     {path : '/createKaryawan' ,  component : createKaryawan , name : 'Karyawan'},
-    {path : '/editJabatan' ,  component : editJabatan , name : 'Jabatan'},
-    {path : '/editKaryawan' ,  component : editKaryawan , name : 'Karyawan'},
-    {path : '/editDivisi' ,  component : editDivisi, name : 'Divisi'}
+    {path : '/editJabatan/:id' ,  component : editJabatan , name : 'Jabatan'},
+    {path : '/editKaryawan/:id' ,  component : editKaryawan , name : 'Karyawan'},
+    {path : '/editDivisi/:id' ,  component : editDivisi, name : 'Divisi'}
 ]
 
 export default  routes
