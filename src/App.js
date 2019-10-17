@@ -31,7 +31,7 @@ class App extends Component {
           <Switch>
               {
                 routes.map((route,idx) => {
-                  return <Route exact path={route.path} component ={route.component} />
+                  return <Route exact path={route.path} component ={route.component} key={idx} />
                 })
               }
 
