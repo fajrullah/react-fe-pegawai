@@ -1,6 +1,6 @@
-import Create from './components/divisi/create.component';
-import Edit from './components/divisi/edit.component';
-import Index from './components/divisi/index.component';
+import Karyawan from './components/karyawan/index.component';
+import Divisi from './components/divisi/index.component';
+import Jabatan from './components/jabatan/index.component';
 
 
 // const routes = [
@@ -10,9 +10,9 @@ import Index from './components/divisi/index.component';
 // ]
 
 const routes = [
-    {path : '/karyawan' , exact : true , component : Create , name : 'Karyawan'},
-    {path : '/divisi' ,  component : Edit , name : 'Divisi'},
-    {path : '/jabatan' ,  component : Index , name : 'Jabatan'}
+    {path : '/karyawan' , exact : true , component : Karyawan , name : 'Karyawan'},
+    {path : '/divisi' ,  component : Divisi , name : 'Divisi'},
+    {path : '/jabatan' ,  component : Jabatan , name : 'Jabatan'}
 ]
 
 export default  routes
