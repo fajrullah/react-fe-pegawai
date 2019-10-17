@@ -62,11 +62,12 @@ constructor(props){
   }
   handlerChange(e){
     this.setState({
-        [e.target.name] : e.target.value
+        [e.target.name] : e.target.value,
+        jabatan : this.refs.jabatan.value,
+        divisi : this.refs.divisi.value
     })
   }
     render() {
-        console.log(this.state.data)
         const { optionDivisi , optionJabatan} = this.state
         return (
             <div style={{marginTop: 10}}>
@@ -79,7 +80,7 @@ constructor(props){
                     </div>
                     <div className="form-group">
                         <label>Jabatan:  </label>
-                        <select className="form-control" name="jabatan" value={this.state.jabatan} onChange={this.handlerChange}>
+                        <select className="form-control" ref="jabatan" value={this.state.jabatan} onChange={this.handlerChange}>
                            {
                                optionJabatan.map((key,index) => {
                                    return <option key={key.id} value={key.id}>{key.nama_jabatan}</option>
@@ -90,7 +91,7 @@ constructor(props){
                     </div>
                     <div className="form-group">
                         <label>Divisi:  </label>
-                        <select className="form-control" name="divisi" value={this.state.divisi} onChange={this.handlerChange}>
+                        <select className="form-control" ref="divisi" value={this.state.divisi} onChange={this.handlerChange}>
                            {
                                optionDivisi.map((key,index) => {
                                    return <option key={key.id} value={key.id}>{key.nama_divisi}</option>
