@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 export default class Index extends Component {
     state = {
         data : []
@@ -14,6 +15,7 @@ export default class Index extends Component {
         return (
             <div>
             <h3 align="center">Jabatan</h3>
+            <Link to={"/createJabatan"} className="btn btn-success">Add</Link>
             <table className="table table-striped" style={{ marginTop: 20 }}>
               <thead>
                 <tr>
@@ -34,7 +36,7 @@ export default class Index extends Component {
                                     {key.nama_jabatan}
                                 </td>
                                 <td>
-                                    <button className="btn btn-primary">Edit</button>
+                                    <button className="btn btn-warning">Edit</button>
                                 </td>
                                 <td>
                                     <button className="btn btn-danger">Delete</button>

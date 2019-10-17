@@ -27,7 +27,7 @@ class App extends Component {
               </ul>
             </div>
           </nav> <br/>
-          <h2>Home</h2> <br/>
+          <h2>CRUD PEGAWAI</h2> <br/>
           <Switch>
               {
                 routes.map((route,idx) => {
